@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Player</title>
+    <link href="style/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/icon.min.css">
+</head>
+<body onload="_loadPlaylist()">
+    <div class="audio-player">
+        <div class="timeline" onclick="_updateTimeLine(event)">
+            <div class="progress"></div>
+        </div>
+        <div class="controls">
+            <div class="play-container">
+                <div class="switch-button switch icono-previous" onclick="_playPrevious()"></div>
+                <div class="toggle-play play" onclick="_clickPlay()"></div>
+                <div class="switch-button switch icono-next" onclick="_playNext()"></div>
+            </div>
+            <div class="time">
+                <div class="current">0:00</div>
+                <div class="divider">/</div>
+                <div class="length">0:00</div>
+            </div>
+            <div class="name" id="play-name">歌曲名称</div>
+            <div class="volume-container">
+                <div class="volume-button" onclick="_toggleVolume()">
+                    <div class="volume icono-volumeMedium"></div>
+                </div>
+                <div class="volume-slider" onclick="_updateVolumeSlider(event)">
+                    <div class="volume-percentage"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/howler/2.2.3/howler.min.js" type="application/javascript"></script>
+    <script src="./js/function.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
